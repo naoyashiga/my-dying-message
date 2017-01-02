@@ -4,9 +4,7 @@
 
 Dying Message is Japanese English :joy: It means that a message left by a person who was killed in a mystery work.
 
-Like this.
-
-![](http://img2.gifmagazine.net/gifmagazine/images/64931/original.gif)
+[Like this](http://gifmagazine.net/post_images/64931).
 
 # Reference
 
