@@ -1,3 +1,8 @@
+
+// Reference: https://github.com/hardmaru/rnn-tutorial
+// https://github.com/hardmaru/rnn-tutorial
+
+
 // Basic Example of Unconditional Handwriting Generation.
 var sketch = function( p ) {
   "use strict";
