@@ -1,8 +1,9 @@
 var gulp = require('gulp'), 
+    ghPages = require('gulp-gh-pages'), 
     webserver = require('gulp-webserver');
 
 gulp.task('server', function() {
-  gulp.src('./')
+  gulp.src('./src/')
     .pipe(webserver({
       livereload: true,
       open: true
@@ -11,7 +12,14 @@ gulp.task('server', function() {
 
 // Rerun the task when a file changes
  gulp.task('watch', function() {
-     gulp.watch(['js/**/*.js','index.html']); 
+     gulp.watch(['src/js/**/*.js','src/index.html']); 
+});
+
+gulp.task('gh-pages', () => {
+  return gulp.src('./src/**/*')
+    .pipe(ghPages({
+      remoteUrl: "https://github.com/naoyashiga/my-dying-message"
+    }));
 });
 
   gulp.task('default', ['watch','server']);
