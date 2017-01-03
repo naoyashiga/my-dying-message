@@ -20,7 +20,7 @@ var sketch = function( p ) {
   var line_color;
 
   var img;
-  var element;
+  var handImageElement;
 
   var imgOffsetX = 10;
   var imgOffsetY = 10;
@@ -31,7 +31,8 @@ var sketch = function( p ) {
     // make sure we enforce some minimum size of our demo
     screen_width = Math.max(window.innerWidth, 480);
     screen_height = Math.max(window.innerHeight, 320);
-    element = document.getElementById("img-hand");
+
+    handImageElement = document.getElementById("img-hand");
 
     // start drawing from somewhere in middle of the canvas
     x = 50;
@@ -76,9 +77,7 @@ var sketch = function( p ) {
       p.strokeWeight(8.0);
       p.line(x, y, x+dx, y+dy); // draw line connecting prev point to current point.
 
-
-	    element.style.left = x + dx - imgOffsetX;
-	    element.style.top  = y + dy - imgOffsetY;
+      handImageElement.style.transform = 'translate3d(' + (x + dx - imgOffsetX) + 'px, ' + (y + dy - imgOffsetY) + 'px, 0)';
     }
 
     // update the absolute coordinates from the offsets
