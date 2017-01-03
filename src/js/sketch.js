@@ -55,7 +55,11 @@ var sketch = function( p ) {
   p.setup = function() {
     restart(); // initialize variables for this demo
     p.createCanvas(screen_width, screen_height);
-    p.frameRate(40);
+    if(screen_width <= 480) {
+      p.frameRate(60);
+    } else {
+      p.frameRate(40);
+    }
     p.background(0, 0, 0, 255);
     p.fill(0, 0, 0, 255);
   };
